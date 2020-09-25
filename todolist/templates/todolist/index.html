@@ -32,13 +32,15 @@
                 <span class="feather" data-feather="trash-2"></span> DELETE ALL
             </button>
         </div>
-        <div class="list-group m-3 mr-2">
-            <a href="#" class="list-group-item list-group-item-action">Cras justo odio</a>
-            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-            <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
-        </div>
+        <ul class="list-group m-3 mr-2">
+            {% for todolist in Todo_items %}
+                {% if todolist.completed %}
+                <li class="list-group-item todo-completed">{{todolist.text}}</li>
+                {% else %}
+                <li class="list-group-item"><a href="">{{todolist.text}}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
     </div>
     <footer class="text-center mt-5 text-white">Copyright &copy; Alin Babu 2020</footer>
     <!-- Optional JavaScript -->
