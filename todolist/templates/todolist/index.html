@@ -15,15 +15,19 @@
 </head>
 
 <body>
-    <div class="container-md p-5">
+    <div class="container-md mt-5 p-5">
         <h1 class="m-3 font-weight-normal">What to do today</h1>
-        <div class="input-group m-3">
-            <input type="text" class="form-control p-4" placeholder="Enter todo e.g. Wash my car"
-                aria-label="Recipient's username" aria-describedby="button-addon2">
-            <div class="input-group-append mr-4">
-                <button class="btn btn-success" type="button" id="button-addon2">ADD</button>
+        <form action="{% url 'add' %}" method="post" role="form">
+            {% csrf_token %}
+            <div class="form-group">
+                <div class="input-group m-3">
+                    {{ form.text }}   
+                    <span class="input-group-append mr-4">
+                        <button class="btn btn-success" type="submit" id="button-addon2">ADD</button>
+                    </span>
+                </div>
             </div>
-        </div>
+        </form>
         <div class="m-3 mb-4">
             <button type="button" class="btn btn-warning text-light">
                 <span class="feather" data-feather="trash-2"></span> DELETE COMPLETED
@@ -35,9 +39,9 @@
         <ul class="list-group m-3 mr-2">
             {% for todolist in Todo_items %}
                 {% if todolist.completed %}
-                <li class="list-group-item todo-completed">{{todolist.text}}</li>
+                    <li class="list-group-item todo-completed">{{todolist.text}}</li>
                 {% else %}
-                <li class="list-group-item"><a href="">{{todolist.text}}</a></li>
+                    <li class="list-group-item"><a href="">{{todolist.text}}</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
@@ -54,8 +58,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-        <script>feather.replace()</script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>feather.replace()</script>
 </body>
 
 </html>
