@@ -12,3 +12,16 @@ body {
     vertical-align: text-top;
 }
 
+div li.todo-completed {
+    background-color: #ccd181;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+li a {
+    color: #257258;
+    font-weight: 500;
+}
+li a:hover{
+    color: #11523c;
+}
