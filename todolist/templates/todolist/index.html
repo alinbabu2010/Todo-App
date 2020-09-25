@@ -1,0 +1,59 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'todolist/style.css' %}">
+    <title>TodoList App</title>
+</head>
+
+<body>
+    <div class="container-md p-5">
+        <h1 class="m-3 font-weight-normal">What to do today</h1>
+        <div class="input-group m-3">
+            <input type="text" class="form-control p-4" placeholder="Enter todo e.g. Wash my car"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append mr-4">
+                <button class="btn btn-success" type="button" id="button-addon2">ADD</button>
+            </div>
+        </div>
+        <div class="m-3 mb-4">
+            <button type="button" class="btn btn-warning text-light">
+                <span class="feather" data-feather="trash-2"></span> DELETE COMPLETED
+            </button>
+            <button type="button" class="btn btn-danger">
+                <span class="feather" data-feather="trash-2"></span> DELETE ALL
+            </button>
+        </div>
+        <div class="list-group m-3 mr-2">
+            <a href="#" class="list-group-item list-group-item-action">Cras justo odio</a>
+            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+            <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+            <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+            <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+        </div>
+    </div>
+    <footer class="text-center mt-5 text-white">Copyright &copy; Alin Babu 2020</footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <script>feather.replace()</script>
+</body>
+
+</html>
