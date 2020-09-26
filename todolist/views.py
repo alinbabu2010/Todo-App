@@ -22,3 +22,11 @@ def completedTodo(request, todo_id):    # Modiying datbase value completed for t
     todo.completed = True
     todo.save()
     return redirect('index')
+
+def deleteCompleted(request):     # Delete the selected completed item
+    Todolist.objects.filter(completed=True).delete()
+    return redirect('index')
+
+def deleteAll(request):     # Delete all todo list items
+    Todolist.objects.all().delete()
+    return redirect('index')
