@@ -29,12 +29,12 @@
             </div>
         </form>
         <div class="m-3 mb-4">
-            <button type="button" class="btn btn-warning text-light">
+            <a href="{% url 'deletecompleted' %}" role="button" class="btn btn-warning text-light">
                 <span class="feather" data-feather="trash-2"></span> DELETE COMPLETED
-            </button>
-            <button type="button" class="btn btn-danger">
+            </a>
+            <a href="{% url 'deleteall' %}" role="button" class="btn btn-danger">
                 <span class="feather" data-feather="trash-2"></span> DELETE ALL
-            </button>
+            </a>
         </div>
         <ul class="list-group m-3 mr-2">
             {% for todolist in Todo_items %}
