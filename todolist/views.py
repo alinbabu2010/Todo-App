@@ -16,3 +16,9 @@ def addTodoItem(request):              # Fetching todo item and adding it to dat
         new_todo = Todolist(text=request.POST['text'])
         new_todo.save()
     return redirect('index')
+
+def completedTodo(request, todo_id):    # Modiying datbase value completed for todo list item completed
+    todo = Todolist.objects.get(pk=todo_id)
+    todo.completed = True
+    todo.save()
+    return redirect('index')
