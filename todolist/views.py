@@ -27,6 +27,6 @@ def deleteCompleted(request):     # Delete the selected completed item
     Todolist.objects.filter(completed=True).delete()
     return redirect('index')
 
-def deleteAll(request):     # Delete all todo list items
+def deleteAll(request):           # Delete all todo list items
     Todolist.objects.all().delete()
     return redirect('index')
